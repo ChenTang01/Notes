@@ -21,8 +21,8 @@
     - **AV model**: Its main decisions are capacity $K$ and price $p_V$. Supply is fixed by its own investment, so $S_V=K$, and profit is $\Pi_V=(p_V-c_V^o)D_V-c_fK$. The key feature is fixed capacity investment: AV has direct control over supply but must bear the upfront capacity cost $c_fK$.
 
     - **RH model**: The RH firm is a ride-hailing platform that does not own vehicles. Its main decisions are the driver revenue share $\alpha$ and price $p_R$. Supply $S_R$ is induced through drivers’ participation decisions, where driver payoff is $(\alpha p_R-c_R^o)D_R/S_R$, and platform profit is $\Pi_R=(1-\alpha)p_RD_R$. The key feature is flexible supply adjustment through $\alpha$.
-
-
-  - **Consumer choice**:  utility is $u_C=a-p_i-bD_i/S_i$, where $p_i$ is price and $D_i/S_i = W(D,S)$ captures waiting cost.
-
-  - ==Deserved Extending==: A mixed AV and human driver business model in which a platform can host AVs owned by a third party.
+  
+  
+    - **Consumer choice**:  utility is $u_C=a-p_i-bD_i/S_i$, where $p_i$ is price and $D_i/S_i = W(D,S)$ captures waiting cost.
+  
+    - ==Deserved Extending==: A mixed AV and human driver business model in which a platform can host AVs owned by a third party.
