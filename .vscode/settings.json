@@ -1,0 +1,56 @@
+{
+  "files.exclude": {
+    "**/.DS_Store": true
+  },
+  "markdown.preview.scrollPreviewWithEditor": true,
+  "markdown.preview.scrollEditorWithPreview": true,
+  "markdown.preview.doubleClickToSwitchToEditor": true,
+  "markdown.styles": [
+    "./.vscode/markdown.css"
+  ],
+  "markdown.validate.enabled": true,
+  "cSpell.enabled": true,
+  "cSpell.language": "en,en-US",
+  "cSpell.enabledLanguageIds": [
+    "markdown",
+    "plaintext"
+  ],
+  "cSpell.diagnosticLevel": "Hint",
+  "cSpell.words": [
+    "backlogged",
+    "MSOM",
+    "MLSys",
+    "POM",
+    "takeaway",
+    "takeaways"
+  ],
+  "ltex.language": "en-US",
+  "ltex.enabled": [
+    "markdown",
+    "plaintext"
+  ],
+  "ltex.additionalRules.enablePickyRules": false,
+  "ltex.dictionary": {
+    "en-US": [
+      "backlogged",
+      "MSOM",
+      "MLSys",
+      "POM",
+      "takeaway",
+      "takeaways"
+    ]
+  },
+  "[markdown]": {
+    "editor.wordWrap": "on",
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": true,
+      "strings": true
+    },
+    "editor.wordBasedSuggestions": "matchingDocuments",
+    "editor.suggestOnTriggerCharacters": true,
+    "editor.acceptSuggestionOnEnter": "smart",
+    "editor.tabCompletion": "on",
+    "editor.snippetSuggestions": "top"
+  }
+}

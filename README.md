@@ -12,22 +12,13 @@
     - The platform profit is $\pi=(1-G(t;x))[\gamma+(k-b)x]-G(t;x)R$, where $\gamma$ is the platform’s restaurant-side revenue and $R$ is the platform penalty after an incident.
     - The government maximizes total social surplus, which includes platform profit, customer surplus, driver earnings, and public safety benefits: $S=\pi^*+\sigma^*+u^*T^*+(1-G(T^*))P$.
 
-  
-
-- **Evolution of Ride Services: From Ride Hailing to Autonomous Vehicles** MS (2026) Daehoon Noh, Tunay I. Tunca, Yi Xu 
+- **Evolution of Ride Services: From Ride Hailing to Autonomous Vehicles** MS (2026) Daehoon Noh, Tunay I. Tunca, Yi Xu
 
   - Perfect characterization between the AV model and RH model:
-
     - **AV model**: Its main decisions are capacity $K$ and price $p_V$. Supply is fixed by its own investment, so $S_V=K$, and profit is $\Pi_V=(p_V-c_V^o)D_V-c_fK$. The key feature is fixed capacity investment: AV has direct control over supply but must bear the upfront capacity cost $c_fK$.
-
     - **RH model**: The RH firm is a ride-hailing platform that does not own vehicles. Its main decisions are the driver revenue share $\alpha$ and price $p_R$. Supply $S_R$ is induced through drivers’ participation decisions, where driver payoff is $(\alpha p_R-c_R^o)D_R/S_R$, and platform profit is $\Pi_R=(1-\alpha)p_RD_R$. The key feature is flexible supply adjustment through $\alpha$.
-  
-  
-    - **Consumer choice**:  utility is $u_C=a-p_i-bD_i/S_i$, where $p_i$ is price and $D_i/S_i = W(D,S)$ captures waiting cost.
-  
+    - **Consumer choice**: utility is $u_C=a-p_i-bD_i/S_i$, where $p_i$ is price and $D_i/S_i = W(D,S)$ captures waiting cost.
     - ==Deserved Extending==: A mixed AV and human driver business model in which a platform can host AVs owned by a third party.
-
-
 
 - **Single-Period Multiproduct Inventory Models with Substitution** OR (1999) Yehuda Bassok, Ravi Anupindi, Ram Akella
 
@@ -78,29 +69,27 @@
     $$
 
   - The second-stage allocation problem is a restricted transportation problem:
-    
+
   - The paper proves that, under its economic assumptions, the optimal second-stage allocation can be found by a greedy algorithm.
-  
+
   - The greedy allocation rule is:
     - Serve demand class $1$ using product $1$.
     - Serve demand class $2$ first using product $2$, then product $1$ if needed.
     - Serve demand class $3$ first using product $3$, then product $2$, then product $1$.
     - Continue similarly for lower classes.
-  
+
   - The proof uses the theory of **Monge sequences** in transportation problems.
-  
+
   - The authors show that the arc ordering induced by downward substitution satisfies a Monge property under their assumptions.
   - Therefore, the greedy allocation is optimal.
-  
+
   - The paper proves that the expected profit function $P(x,y)$ is:
     - Concave.
     - Submodular.
-  
+
   - The main conclusion is that ==*full downward substitution creates a structured second-stage allocation problem whose optimal solution can be obtained by a greedy rule rather than by solving a general transportation problem.*==
-  
+
   - The key OM insight is that ==*if one product has more inventory, the marginal value of another substitutable product decreases.*==
-
-
 
 - **Principles on the Benefits of Manufacturing Process Flexibility** MS (1995) William C. Jordan, Stephen C. Graves
 
@@ -155,25 +144,23 @@
   - The accessible capacity for $M$ is: $\sum_{j\in P(M)}c_j$, and the demandof $M$ is $\sum_{i\in M}d_i.$ If $\sum_{i\in M}d_i>\sum_{j\in P(M)}c_j$, then subset $M$ must experience shortfall.
 
   - Thus:
-  
+
     $$
-  V(A)
+    V(A)
     =
-  \max_{M}
+    \max_{M}
     \left\{
     \sum_{i\in M}d_i
     -
-  \sum_{j\in P(M)}c_j
+    \sum_{j\in P(M)}c_j
     \right\}.
-  $$
-  
+    $$
+
   - The flexibility design is good if every product subset $M$ can access enough capacity.
-  
-- The main conclusion is that ==*a small amount of well-structured process flexibility can capture most of the value of total flexibility.*==
-  
-- The key OM insight is that ==*the value of flexibility is governed by subset-level demand-capacity bottlenecks, not simply by the total number of flexibility links.*==
 
+  - The main conclusion is that ==*a small amount of well-structured process flexibility can capture most of the value of total flexibility.*==
 
+  - The key OM insight is that ==*the value of flexibility is governed by subset-level demand-capacity bottlenecks, not simply by the total number of flexibility links.*==
 
 - **Sustainable AI: Environmental Implications, Challenges and Opportunities** MLSys (2022) Carole-Jean Wu et al.
 
@@ -191,4 +178,33 @@
 
   - The paper addresses the ==carbon-emission== problem faced by AI companies. Its main argument is that AI firms should not evaluate sustainability only by the electricity used to train a single large model. Instead, they must account for the full carbon footprint of AI, including data processing, experimentation, training, inference, hardware manufacturing, data-center operation, and edge/on-device computation. The key issue is that AI firms continuously scale data, models, infrastructure, and inference traffic, so carbon emissions are an ongoing operational and supply-chain problem rather than a one-time model-training cost.
 
-    
+- **A Review of Flexible Processes and Operations** POM (2021) Shixin Wang, Xuan Wang, Jiawei Zhang
+
+  <img src="pic/flexible-processes-designs.svg" alt="Flexibility designs" style="zoom:50%;" />
+
+  - **Independent Capacity Allocations** (Single-period problem)
+    - Model: $Z(d,A)=\max \sum_{(i,j)\in A} x_{ij}, s.t. \sum_{i=1}^{m} x_{ij} \le d_j, \sum_{j=1}^{n} x_{ij} \le C_i.$
+      - A sparse flexibility design $A$ is $(1-\epsilon)$-optimal in expectation if $E_D[Z(D,A)] \ge (1-\epsilon)E_D[Z(D,F)].$
+      - A sparse flexibility design $A$ is $(1-\epsilon)$-optimal in the worst case if $Z(d,A) \ge (1-\epsilon)Z(d,F), \qquad \forall d\in S.$
+    - Performance of Long Chain: Leftover capacity: $X \stackrel{d}{=} \max\{0,\, C - (D-X)^+\}.$ When the variability of demand is small, the long chain has a huge performance guarantee. The performance is decreasing in $n$.
+    - K-Chain:
+
+      \[
+      \lim_{n\to\infty}
+      \frac{\mathbb{E}_D[Z(D,C_n^k)]}{\mathbb{E}_D[Z(D,F_n)]}
+      \ge
+      \frac{k+3}{4}
+      -
+      \frac{\sqrt{(k-1)^2+4\left(\frac{\sigma}{\lambda}\right)^2}}{4}.
+      \]
+
+    - Graph Expander Design: Good sparse flexibility designs should have strong expansion. A bipartite graph $G=(U,W,A)$ is an $(a,\epsilon)$-expander if, for every product subset $V\subseteq W$ with $|V|\le an$,
+
+      $$
+      |C_A(V)|>\frac{1-\epsilon}{a}|V|,
+      $$
+
+      where $C_A(V)=\{i\in U:(i,j)\in A \text{ for some } j\in V\}$ is the set of capacity nodes connected to $V$. Preventing subset-level bottlenecks and explains why well-connected sparse structures can perform close to full flexibility.
+
+  - **Dependent Capacity Allocations**
+    - Multi-period problem: offline allocation + backlog / online allocation + lost sales.
