@@ -208,3 +208,8 @@
 
   - **Dependent Capacity Allocations**
     - Multi-period problem: offline allocation + backlog / online allocation + lost sales.
+
+- **Managing Payment Flexibility in Rent-to-Own Contracts for Off-Grid Energy Products** MSOM (2026) Jose A. Guajardo, Elaheh Rashidinejad, Gonzalo Romero, Hosain Zaman
+  - The paper models the consumer's effective budget $B_t$ as a geometric random variable, because the probability that the base-of-pyramids consumers have high budget drop significantly.
+  - The consumer's repayment decision is a DP problem close to the inventory problem. The state is $(a_t,o_t)$, where $a_t$ is the number of advanced installments already paid and $o_t$ is the number of outstanding installments needed for ownership. Given realized budget $b_t$, the optimal policy has an order-up-to structure: $x_t\in\{0,\ldots,\min(b_t,o_t)\}$.
+  - ==*Under some conditions, maximizing firm revenue is equivalent to minimizing the consumer's expected time to ownership: $E[\Pi_1]\ge E[\Pi_2]$ if and only if $E[\tau_1]\le E[\tau_2]$.*==
